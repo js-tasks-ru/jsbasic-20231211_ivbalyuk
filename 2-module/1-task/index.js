@@ -4,10 +4,7 @@ function sumSalary(salaries) {
   for (let key in salaries) {
     let presentValue = salaries[key];
 
-    if (typeof presentValue === 'number' 
-    && String(presentValue) !== 'NaN' 
-    && presentValue !== Infinity 
-    && presentValue !== -Infinity) {
+    if (typeof presentValue === 'number' && isFinite(presentValue)) {
       totalSalary += presentValue;
     } 
   }
