@@ -1,7 +1,0 @@
-version: 1
-travis: false
-git:
-  copy:
-    - '*.*'
-    - assets/**
-    - '.github/**/*.*'
