@@ -18,7 +18,7 @@ export default class Carousel {
     this.addArrowListener();
     this.addToBacket();
   }
-  
+
   createCarousel() {
     for (let slide of this.slides) {
       const element = createElement(`
@@ -37,7 +37,7 @@ export default class Carousel {
       this.elem.querySelector(".carousel__inner").append(element);
     }
   }
-  
+
   addArrowListener() {
     const carouselInner = this.elem.querySelector(".carousel__inner");
     let clickCount = 0;
@@ -66,7 +66,7 @@ export default class Carousel {
 
   addToBacket() {
     this.elem.addEventListener("click", (event) => {
-      if (event.target.classList.contains("carousel__button")) {
+      if (event.target.closest("button")) {
         const id = event.target.closest(".carousel__slide").dataset.id;
         let productAdd = new CustomEvent("product-add", {
           detail: id,

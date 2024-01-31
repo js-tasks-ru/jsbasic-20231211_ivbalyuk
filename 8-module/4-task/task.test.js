@@ -186,6 +186,7 @@ describe('8-module-4-task', () => {
           await Promise.all([fetchPromise, responseJsonPromise]);
 
           let modalTitle = document.querySelector('.modal__title');
+          console.log(modalTitle);
 
           expect(modalTitle.textContent).toBe('Success!');
 
