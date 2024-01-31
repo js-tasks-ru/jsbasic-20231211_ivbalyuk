@@ -92,7 +92,6 @@ export default class StepSlider {
     if (spanActive) {
       spanActive.classList.remove("slider__step-active");
     }
-    
     spans[this.value].classList.add("slider__step-active");
   }
 
